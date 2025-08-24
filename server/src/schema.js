@@ -10,12 +10,20 @@ const typeDefs = gql`
   type Track {
     id: ID!
     title: String!
+    description: String
     author: Author!
     thumbnail: String
     length: Int
     modulesCount: Int
+    numberOfViews: Int
+    modules: [Module!]!
   }
 
+  type Module {
+    id: ID!
+    title: String
+    length: Int
+  }
   "Author of a complete track"
   type Author {
     id: ID!
