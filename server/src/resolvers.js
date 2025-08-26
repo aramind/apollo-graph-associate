@@ -15,7 +15,7 @@ const resolvers = {
       return dataSources.tracksAPI.getAuthor(authorId);
     },
     modules: ({ id }, _, { dataSources }) => {
-      return dataSources.tracksAPI.getTracksModules(id);
+      return dataSources.tracksAPI.getTracksModules(id) || [];
     },
   },
 };
